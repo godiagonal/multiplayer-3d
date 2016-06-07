@@ -1,0 +1,196 @@
+/* Variables */
+/* Elements */
+* {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  margin: 0;
+  overflow: hidden;
+  font-weight: 300;
+}
+table {
+  border-collapse: collapse;
+}
+table td {
+  vertical-align: top;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+h1,
+h2,
+h3 {
+  font-weight: 300;
+}
+input {
+  display: inline-block;
+  margin: 0;
+  margin-right: 10px;
+  line-height: 23px;
+  padding: 10px 15px;
+  background: #fff;
+  outline: none;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  box-shadow: inset 0 0 3px 0 rgba(0,0,0,0.2);
+  -webkit-box-shadow: inset 0 0 3px 0 rgba(0,0,0,0.2);
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 12pt;
+  font-weight: 300;
+  transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+}
+input[type=text]:focus {
+  border-color: #e65a30;
+}
+input[type=button] {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  background-color: #7abc72;
+  border-color: #61965b;
+  color: #fff;
+  cursor: pointer;
+}
+input[type=button]:hover {
+  background-color: #87d17e;
+  border-color: #6ea767;
+}
+/* Classes */
+.error {
+  color: #c44242;
+}
+.success {
+  color: #408940;
+}
+.speechBubble {
+  background: #fff;
+  padding: 7px;
+  border-radius: 5px;
+  border: 1px solid #535353;
+  box-shadow: inset 0 0 3px 0 rgba(0,0,0,0.2);
+  -webkit-box-shadow: inset 0 0 3px 0 rgba(0,0,0,0.2);
+  overflow-y: hidden;
+  position: absolute;
+  z-index: 5;
+  font-size: 10pt;
+}
+.nameLabel {
+  overflow-y: hidden;
+  position: absolute;
+  z-index: 4;
+  color: #fff;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  letter-spacing: 2px;
+}
+/* IDs */
+#blocker {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.75);
+  z-index: 10;
+}
+#instructions {
+  position: absolute;
+  top: calc(50% - 250px);
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+}
+#instructions input {
+  margin-top: 30px;
+}
+#instructions #newPlayer {
+  display: none;
+}
+#instructions #newPlayer #txtName {
+  width: 250px;
+}
+#instructions #startGame {
+  display: none;
+}
+#instructions #startGame #btnStart {
+  width: 80px;
+}
+#instructions #about {
+  margin-top: 150px;
+}
+#instructions #about img {
+  width: 50px;
+  opacity: 0.6;
+  transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+}
+#instructions #about img:hover,
+#instructions #about img:focus {
+  opacity: 1;
+}
+#chat {
+  height: 200px;
+  width: 500px;
+  position: absolute;
+  bottom: 0;
+  margin: 10px 10px;
+  z-index: 5;
+  display: none;
+}
+#chat #messages {
+  width: 100%;
+  height: 75%;
+  height: calc(100% - 50px);
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  box-shadow: inset 0 0 3px 0 rgba(0,0,0,0.2);
+  -webkit-box-shadow: inset 0 0 3px 0 rgba(0,0,0,0.2);
+}
+#chat #messages #messagesInner {
+  height: 90%;
+  margin: 8px;
+  overflow-y: scroll;
+  font-size: 10pt;
+}
+#chat #messages #messagesInner #messageList {
+  width: 100%;
+}
+#chat #messages #messagesInner #messageList td:nth-child(1) {
+  width: 32px;
+}
+#chat #messages #messagesInner #messageList td {
+  padding-right: 5px;
+  padding-top: 5px;
+}
+#chat #messages #messagesInner #messageList .userName {
+  font-weight: bold;
+}
+#chat #messages #messagesInner #messageList .server {
+  color: #808080;
+}
+#chat #input {
+  width: 100%;
+  height: 37px;
+  position: absolute;
+  bottom: 0;
+}
+#chat #input #txtMessage {
+  display: block;
+  float: left;
+  height: 25px;
+  width: calc(100% - 20px);
+  padding: 5px 10px;
+  resize: none;
+  margin: 0;
+}

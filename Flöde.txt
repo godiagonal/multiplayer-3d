@@ -1,0 +1,44 @@
+1. Klient: Ansluter (visa ”Laddar”)
+
+	1. socket skapas i server (connection)
+	2. klient onload: cookieData skickas från server (checkSession)
+
+2. Klient: Har cookie (pId != null)
+
+	1. player-obj letas i player-array mha pId
+	   Om hittas: börja från 3.4
+	   Annars: börja från 3.1
+
+3. Klient: Har ej cookie (pId == null)
+
+	1. msg emittas till sender (checkSessionCallback)
+		klient väljer namn och klickar start (initNewSession)
+	2. player-obj skapas med namn och pId i server
+		pId = socketId?
+	3. player-obj läggs till i player-array
+	4. player-obj läggs till i socket
+	5. player-obj (alla andra + eget) emittas till sender (initPlayer)
+		klient sparar pId i cookie
+	6. player-obj emittas till alla klienter förutom sender (newPlayer)
+
+4. Klient: Rör sig
+
+	1. player-obj pos uppdateras i klient och server
+	2. player-obj emittas till alla klienter förutom sender (updatePlayer)
+
+5. Klient: Skriver
+
+	1. msg-obj skapas i server
+	2. lägg till i chat-obj
+	3. lägg till i player-obj
+	4. player-obj och chat-obj emittas till alla klienter (updateChat / updatePlayer)
+
+6. Klient: Kopplar från
+
+	1. player-obj tas bort från socket
+	2. player-obj emittas till alla klienter (removePlayer)
+	3. socket tas bort
+
+
+
+player-array bör rensa bort players med lastLogin > 1 vecka

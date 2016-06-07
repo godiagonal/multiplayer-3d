@@ -14,7 +14,7 @@ var Player = function (id, name) {
         
         //var material = new THREE.MeshBasicMaterial({color: '#555555'});
         var material = new THREE.MeshPhongMaterial({
-            map: textureLoader.load('images/textures/player-map.jpg')
+            map: textureLoader.load('img/textures/player-map.jpg')
         });
 
         var rightArm = [new THREE.Vector2(0, .666), new THREE.Vector2(.5, .666), new THREE.Vector2(.5, 1), new THREE.Vector2(0, 1)];

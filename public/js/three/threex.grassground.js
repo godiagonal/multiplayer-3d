@@ -45,4 +45,4 @@ THREEx.GrassGround	= function(opts){
 	return object3D;
 }
 
-THREEx.GrassGround.baseUrl	= "../../images/textures/grass/"
+THREEx.GrassGround.baseUrl	= "../../img/textures/grass/"

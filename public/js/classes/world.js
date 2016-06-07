@@ -105,7 +105,7 @@ var World = function () {
     var initCubes = function () {
 
         var material = new THREE.MeshPhongMaterial({
-            map: textureLoader.load('images/textures/cube-map.jpg')
+            map: textureLoader.load('img/textures/cube-map.jpg')
         });
 
         var bricks = [new THREE.Vector2(0, .666), new THREE.Vector2(.5, .666), new THREE.Vector2(.5, 1), new THREE.Vector2(0, 1)];

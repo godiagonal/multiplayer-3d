@@ -1,5 +1,5 @@
 {
-  "name": "3D Multiplayer Demo",
+  "name": "multiplayer-3d",
   "version": "1.0.0",
   "private": false,
   "scripts": {
@@ -7,6 +7,8 @@
   },
   "dependencies": {
     "express": "3.4.8",
-    "jade": "*"
+    "jade": "1.11.0",
+    "socket.io": "0.9.16",
+    "stylus": "0.54.5"
   }
 }

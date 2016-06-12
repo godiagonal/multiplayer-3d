@@ -1,4 +1,4 @@
-var socket = io.connect('192.168.0.101:3000');
+var socket = io.connect('127.0.0.1:3000'); //http://multiplayer-1.jc9kdrybmr.eu-west-1.elasticbeanstalk.com
 
 var world,
     self,

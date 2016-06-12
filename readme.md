@@ -2,7 +2,7 @@
 
 Simple 3D multiplayer game developed using mainly node.js and three.js.
 
-You can try it over here: https://godiagonal.github.io
+You can try it over here: http://goo.gl/PrNTTx
 
 The following three.js extensions were used:
   * https://github.com/eee-c/threejs-labels
